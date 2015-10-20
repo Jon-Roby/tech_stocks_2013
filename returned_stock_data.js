@@ -140374,5 +140374,22 @@ function d3Format(array) {
   return result
 }
 
-var result = d3Format(advertising);
-document.body.innerHTML = JSON.stringify(result);
+function list(array) {
+  result = [];
+  for (var i = 0; i < array.length; i++) {
+    result.push( array[i][0].symbol )
+  }
+  console.log(result);
+}
+
+list(retail);
+list(messaging);
+list(advertising);
+list(platform);
+list(money);
+list(security);
+list(website);
+list(miscellaneous);
+
+// var result = d3Format(advertising);
+// document.body.innerHTML = JSON.stringify(result);

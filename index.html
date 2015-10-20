@@ -9,27 +9,39 @@
     <script type="text/javascript" src="dist/metricsgraphics.js"></script>
 
     <link rel="stylesheet" href="dist/metricsgraphics.css">
-  </head>
+		<link rel="stylesheet" href="style.css">
+	</head>
 	<body>
 
-		<div id="retail"></div>
+		<div id="center">
+			<div id="retail"></div>
+			<div id="retailLegend"></div>
 
-		<div id="messaging"></div>
+			<div id="messaging"></div>
+			<div id="messagingLegend"></div>
 
-		<div id="advertising"></div>
+			<div id="advertising"></div>
+			<div id="advertisingLegend"></div>
 
-		<div id="platform"></div>
+			<div id="platform"></div>
+			<div id="platformLegend"></div>
 
-		<div id="money"></div>
+			<div id="money"></div>
+			<div id="moneyLegend"></div>
 
-		<div id="security"></div>
+			<div id="security"></div>
+			<div id="securityLegend"></div>
 
-		<div id="website"></div>
+			<div id="website"></div>
+			<div id="websiteLegend"></div>
 
-		<div id="miscellaneous"></div>
+			<div id="miscellaneous"></div>
+			<div id="miscellaneousLegend"></div>
+		</div>
 
 
-		<!-- <script src="returned_stock_data.js"></script> -->
+		<script src="returned_stock_data.js"></script>
+
 
     <script>
 
@@ -47,8 +59,8 @@
 						height: 200,
 						right: 40,
 						target: '#retail',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["QUNR", "LITB", "ZU", "SALE", "WUBA"],
+						legend_target: '#retailLegend'
 				});
 			});
 
@@ -65,8 +77,8 @@
 						height: 200,
 						right: 40,
 						target: '#messaging',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["MVNR", "RNG", "GOMO", "TRMR", "TWTR"],
+						legend_target: '#messagingLegend'
 				});
 			});
 
@@ -85,8 +97,8 @@
 						height: 200,
 						right: 40,
 						target: '#advertising',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["MRIN", "YUME", "CRTO", "FUEL"],
+						legend_target: '#advertisingLegend'
 				});
 			});
 
@@ -103,8 +115,8 @@
 						height: 200,
 						right: 40,
 						target: '#platform',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["MKTO", "ECOM", "CVT"],
+						legend_target: '#platformLegend'
 				});
 			});
 
@@ -121,8 +133,8 @@
 						height: 200,
 						right: 40,
 						target: '#money',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["XOOM", "QIWI"],
+						legend_target: '#moneyLegend'
 				});
 			});
 
@@ -139,8 +151,8 @@
 						height: 200,
 						right: 40,
 						target: '#security',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["FEYE", "CUDA"],
+						legend_target: '#securityLegend'
 				});
 			});
 
@@ -157,8 +169,8 @@
 						height: 200,
 						right: 40,
 						target: '#website',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["EIGI", "WIX"],
+						legend_target: '#websiteLegend'
 				});
 			});
 
@@ -175,8 +187,8 @@
 						height: 200,
 						right: 40,
 						target: '#miscellaneous',
-						legend: ['Line 1','Line 2','Line 3'],
-						legend_target: '.legend'
+						legend: ["WBAI", "TXTR", "ATHM"],
+						legend_target: '#miscellaneousLegend'
 				});
 			});
 
