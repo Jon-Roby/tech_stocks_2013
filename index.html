@@ -12,7 +12,175 @@
   </head>
 	<body>
 
-    <h1>Hello World!</h1>
+		<div id="retail"></div>
+
+		<div id="messaging"></div>
+
+		<div id="advertising"></div>
+
+		<div id="platform"></div>
+
+		<div id="money"></div>
+
+		<div id="security"></div>
+
+		<div id="website"></div>
+
+		<div id="miscellaneous"></div>
+
+
+		<!-- <script src="returned_stock_data.js"></script> -->
+
+    <script>
+
+
+			d3.json('data/retail.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Retail",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#retail',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/messaging.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Messaging",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#messaging',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/ads.json', function(data) {
+
+				for (var i = 0; i < data.length; i++) {
+
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Ads",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#advertising',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/platform.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Platform",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#platform',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/money.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Money",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#money',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/security.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Security",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#security',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/website.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Website",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#website',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+			d3.json('data/miscellaneous.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+						data[i] = MG.convert.date(data[i], 'date');
+				}
+
+				MG.data_graphic({
+						title: "Miscellaneous",
+						description: "",
+						data: data,
+						width: 600,
+						height: 200,
+						right: 40,
+						target: '#miscellaneous',
+						legend: ['Line 1','Line 2','Line 3'],
+						legend_target: '.legend'
+				});
+			});
+
+    </script>
 
 	</body>
 </html>
