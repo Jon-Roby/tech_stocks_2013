@@ -4,196 +4,123 @@
 		<meta charset="utf-8">
 		<title>Tech Stocks</title>
 
-    <!-- <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script> -->
 		<script src="d3/d3.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="dist/metricsgraphics.js"></script>
 
+
     <link rel="stylesheet" href="dist/metricsgraphics.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="node_modules/bootstrap/js/collapse.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 
-		<div id="center">
-			<div id="retail"></div>
-			<div id="retailLegend"></div>
 
-			<div id="messaging"></div>
-			<div id="messagingLegend"></div>
 
-			<div id="advertising"></div>
-			<div id="advertisingLegend"></div>
+		<nav class="navbar navbar-default navbar-fixed-top">
 
-			<div id="platform"></div>
-			<div id="platformLegend"></div>
+			<div id="titleDiv">
+				<h1><a id="title" href="">Stock Prices for 2013 Tech IPOs</a></h1>
+			</div>
 
-			<div id="money"></div>
-			<div id="moneyLegend"></div>
+			<!-- <div id="industries">
+				<a href="">Retail</a>
+				<a href="">Messaging</a>
+				<a href="">Advertising</a>
+				<a href="">Platform</a>
+				<a href="">Money</a>
+				<a href="">Security</a>
+				<a href="">Website</a>
+				<a href="">Miscellaneous</a>
+			</div> -->
 
-			<div id="security"></div>
-			<div id="securityLegend"></div>
 
-			<div id="website"></div>
-			<div id="websiteLegend"></div>
+			  <!-- <button class="btn btn-primary" type="button" id="sectorsButton" data-toggle="collapse" data-target="#collapseTest">
+			    Sectors
+			  </button> -->
 
-			<div id="miscellaneous"></div>
-			<div id="miscellaneousLegend"></div>
+
+
+		</nav>
+
+		<!-- <div class="collapse" id="collapseTest" aria-labelledby="dropdownMenu1">
+
+			<li><a href="">Retail</a></li>
+			<li><a href="">Messaging</a></li>
+			<li><a href="">Advertising</a></li>
+			<li><a href="">Platform</a></li>
+			<li><a href="">Money</a></li>
+			<li><a href="">Security</a></li>
+			<li><a href="">Website</a></li>
+			<li><a href="">Miscellaneous</a></li>
+
+		</div> -->
+
+
+
+
+
+
+
+		<div id="graphs">
+			<div class="graph">
+				<div id="retail"></div>
+				<div id="retailLegend"></div>
+			</div>
+
+			<div class="graph">
+				<div id="messaging"></div>
+				<div id="messagingLegend"></div>
+			</div>
+
+			<div class="graph">
+				<div id="advertising"></div>
+				<div id="advertisingLegend"></div>
+			</div>
+
+
+			<div class="graph">
+				<div id="platform"></div>
+				<div id="platformLegend"></div>
+			</div>
+
+
+			<div class="graph">
+				<div id="money"></div>
+				<div id="moneyLegend"></div>
+			</div>
+
+
+			<div class="graph">
+				<div id="security"></div>
+				<div id="securityLegend"></div>
+			</div>
+
+
+			<div class="graph">
+				<div id="website"></div>
+				<div id="websiteLegend"></div>
+			</div>
+
+
+			<div class="graph">
+				<div id="miscellaneous"></div>
+				<div id="miscellaneousLegend"></div>
+			</div>
+
 		</div>
 
 
-		<script src="returned_stock_data.js"></script>
+		<!-- <script src="returned_stock_data.js"></script> -->
 
 
-    <script>
+    <script src="graphs.js"></script>
 
-
-			d3.json('data/retail.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Retail",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#retail',
-						legend: ["QUNR", "LITB", "ZU", "SALE", "WUBA"],
-						legend_target: '#retailLegend'
-				});
-			});
-
-			d3.json('data/messaging.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Messaging",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#messaging',
-						legend: ["MVNR", "RNG", "GOMO", "TRMR", "TWTR"],
-						legend_target: '#messagingLegend'
-				});
-			});
-
-			d3.json('data/ads.json', function(data) {
-
-				for (var i = 0; i < data.length; i++) {
-
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Ads",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#advertising',
-						legend: ["MRIN", "YUME", "CRTO", "FUEL"],
-						legend_target: '#advertisingLegend'
-				});
-			});
-
-			d3.json('data/platform.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Platform",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#platform',
-						legend: ["MKTO", "ECOM", "CVT"],
-						legend_target: '#platformLegend'
-				});
-			});
-
-			d3.json('data/money.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Money",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#money',
-						legend: ["XOOM", "QIWI"],
-						legend_target: '#moneyLegend'
-				});
-			});
-
-			d3.json('data/security.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Security",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#security',
-						legend: ["FEYE", "CUDA"],
-						legend_target: '#securityLegend'
-				});
-			});
-
-			d3.json('data/website.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Website",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#website',
-						legend: ["EIGI", "WIX"],
-						legend_target: '#websiteLegend'
-				});
-			});
-
-			d3.json('data/miscellaneous.json', function(data) {
-				for (var i = 0; i < data.length; i++) {
-						data[i] = MG.convert.date(data[i], 'date');
-				}
-
-				MG.data_graphic({
-						title: "Miscellaneous",
-						description: "",
-						data: data,
-						width: 600,
-						height: 200,
-						right: 40,
-						target: '#miscellaneous',
-						legend: ["WBAI", "TXTR", "ATHM"],
-						legend_target: '#miscellaneousLegend'
-				});
-			});
-
-    </script>
 
 	</body>
+
+
 </html>

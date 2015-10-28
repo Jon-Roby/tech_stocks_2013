@@ -1,5 +1,101 @@
+@font-face {
+  font-family: 'avenir';
+  src: url('avenir-next-lt-pro/AvenirNextLTPro.otf');
+}
+
+@font-face {
+  font-family: 'avenirBold';
+  src: url('avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
+}
+
+
+.navbar {
+  background-color: #19B5FE;
+
+  border-radius: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'avenirBold';
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#sectorsButton {
+  border: none;
+  background-color: #19B5FE;
+}
+
+
+#industries {
+  visibility: hidden;
+}
+
+body {
+  font-family: 'avenir';
+  background-color: #f0f0f0;
+  padding-top: 140px;
+}
+
+@media (min-width: 600px) {
+
+  body {
+    padding-top: 100px;
+  }
+
+  /*#titleDiv {
+    width: 25%;
+    padding-left: 35px;
+  }*/
+
+  #industries {
+    visibility: visible;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .industries a:hover {
+    color: #2C3E50;
+  }
+
+  #sectorsButton {
+    visibility: hidden;
+  }
+
+}
+
 #center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+
+#graphs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+.graph {
+  background-color: white;
+  margin-bottom: 30px;
+
+}
+
+#title {
+  color: white;
+
+}
+
+h2 {
+  color: #2C3E50;  /* #F64747; */
+  font-family: 'avenirBold';
 }
